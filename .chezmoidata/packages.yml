@@ -12,6 +12,7 @@ packages:
     - 'nvm'
     - 'tmux'
     - 'yarn'
+    - 'zoxide'
     casks:
     - '1password-cli'
     - 'nikitabobko/tap/aerospace'
