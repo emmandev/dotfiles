@@ -14,7 +14,7 @@ packages:
     - 'yarn'
     casks:
     - '1password-cli'
-    - 'aerospace'
+    - 'nikitabobko/tap/aerospace'
     - 'docker'
     - 'font-monaspace'
     - 'ghostty'
