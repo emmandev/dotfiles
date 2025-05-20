@@ -22,6 +22,10 @@
 	exact = true
 	stripComponents = 1
 
+[".config/nvim"]
+	type = "git-repo"
+	url = "https://github.com/emmandev/lazyvim.git"
+
 [".config/tmux/plugins/tpm"]
 	type = "git-repo"
 	url = "https://github.com/tmux-plugins/tpm"
