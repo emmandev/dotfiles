@@ -21,3 +21,25 @@
 	url = "https://github.com/romkatv/powerlevel10k/archive/v1.20.0.tar.gz"
 	exact = true
 	stripComponents = 1
+
+[".config/tmux/plugins/tpm"]
+	type = "git-repo"
+	url = "https://github.com/tmux-plugins/tpm"
+[".config/tmux/plugins/tmux-continuum"]
+	type = "git-repo"
+	url = "https://github.com/tmux-plugins/tmux-continuum"
+[".config/tmux/plugins/tmux-online-status"]
+	type = "git-repo"
+	url = "https://github.com/tmux-plugins/tmux-online-status"
+[".config/tmux/plugins/tmux-resurrect"]
+	type = "git-repo"
+	url = "https://github.com/tmux-plugins/tmux-resurrect"
+[".config/tmux/plugins/vim-tmux-navigator"]
+	type = "git-repo"
+	url = "https://github.com/christoomey/vim-tmux-navigator"
+
+[".tmuxifier"]
+	type = "archive"
+	url = "https://github.com/jimeh/tmuxifier/archive/main.tar.gz"
+	exact = true
+	stripComponents = 1
