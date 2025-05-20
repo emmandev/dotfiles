@@ -1,6 +1,7 @@
 packages:
   darwin:
     brews:
+    - 'awscli'
     - 'bat'
     - 'eza'
     - 'fd'
