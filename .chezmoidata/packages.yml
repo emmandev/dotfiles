@@ -1,0 +1,21 @@
+packages:
+  darwin:
+    brews:
+    - 'bat'
+    - 'eza'
+    - 'fd'
+    - 'fzf'
+    - 'git-lfs'
+    - 'lazydocker'
+    - 'lazygit'
+    - 'neovim'
+    - 'nvm'
+    - 'tmux'
+    - 'yarn'
+    casks:
+    - '1password-cli'
+    - 'aerospace'
+    - 'docker'
+    - 'font-monaspace'
+    - 'ghostty'
+    - 'meetingbar'
