@@ -13,6 +13,7 @@ packages:
     - 'nvm'
     - 'tmux'
     - 'yarn'
+    - 'yazi'
     - 'zoxide'
     casks:
     - '1password-cli'
