@@ -11,6 +11,7 @@ packages:
     - 'lazygit'
     - 'neovim'
     - 'nvm'
+    - 'reattach-to-user-namespace'
     - 'tmux'
     - 'yarn'
     - 'yazi'
