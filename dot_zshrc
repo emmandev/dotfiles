@@ -161,6 +161,8 @@ alias ls="eza --long --color=always --icons=always --no-user --header --group-di
 # Bat: the better cat
 alias cat="bat"
 
+alias lzg="lazygit"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
