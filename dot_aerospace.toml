@@ -118,16 +118,16 @@ alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
-alt-5 = 'workspace 5'
+alt-5 = 'workspace 5' # Email, iCalendar
 alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
-alt-9 = 'workspace 9'
+alt-9 = 'workspace 9' # iMessage
 alt-b = 'workspace B' # Browser
 alt-c = 'workspace C' # Cursor, VSCode
 alt-d = 'workspace D' # Database
 alt-f = 'workspace F' # Finder
-alt-e = 'workspace M' # Email, SMS
+# alt-e = 'workspace M' 
 alt-s = 'workspace S' # Slack
 alt-t = 'workspace T' # Terminal
 alt-z = 'workspace Z' # Zoom
@@ -203,6 +203,22 @@ if.app-id = 'com.docker.docker'
 run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'move-node-to-workspace 9'
+
+[[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
 run = 'move-node-to-workspace B'
 
@@ -211,7 +227,7 @@ if.app-id = 'com.microsoft.VSCode'
 run = 'move-node-to-workspace C'
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.VSCode'
+if.app-id = 'com.todesktop.230313mzl4w4u92' # Cursor
 run = 'move-node-to-workspace C'
 
 [[on-window-detected]]
@@ -221,10 +237,6 @@ run = 'move-node-to-workspace D'
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = 'move-node-to-workspace F'
-
-[[on-window-detected]]
-if.app-id = 'com.apple.mail'
-run = 'move-node-to-workspace M'
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
