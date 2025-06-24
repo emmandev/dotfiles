@@ -178,3 +178,14 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 # proto
 export PROTO_HOME="$HOME/.proto";
 export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";
+
+# yazi
+# provides the ability to change the current working directory when exiting Yazi
+# use `yz` instead of `yazi` then `q` to exit
+function yz() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
