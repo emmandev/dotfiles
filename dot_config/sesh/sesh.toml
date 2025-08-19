@@ -1,0 +1,69 @@
+import = [
+  "~/.config/sesh/configs/symphosize.toml"
+]
+
+[default_session]
+startup_command = "nvim +GoToFile"
+preview_command = "eza --all --git --icons --color=always {}"
+
+# dotfiles
+[[session]]
+name = "dotfiles (~/.config)"
+path = "~/.config"
+startup_command = "yazi"
+
+[[session]]
+name = "aerospace config"
+path = "~/"
+startup_command = "chezmoi edit -/.aerospace.toml"
+preview_command = "bat ~/.aerospace.toml"
+
+[[session]]
+name = "ghostty config"
+path = "~/.config/ghostty"
+startup_command = "chezmoi edit ~/config/ghostty/config"
+preview_command = "bat ~/config/ghostty/config"
+
+[[session]]
+name = "lazyvim"
+path = "~/.config/nvim"
+
+[[session]]
+name = "sesh config"
+path = "~/.config/sesh"
+startup_command = "chezmoi edit ~/config/sesh/sesh.toml"
+preview_command = "bat ~/config/sesh/sesh.toml"
+
+[[session]]
+name = "tmux config"
+path = "~/.config/tmux"
+startup_command = "chezmoi edit ~/config/tmux/tmux.conf"
+preview_command = "bat ~/config/tmux/tmux.conf"
+
+[[session]]
+name = "yazi config"
+path = "~/.config/yazi"
+startup_command = "nvim ."
+
+[[session]]
+name = "zsh config"
+path = "~/"
+startup_command = "chezmoi edit ~/.zshrc"
+preview_command = "bat ~/.zshrc"
+
+# utilities
+[[session]]
+name = "chezmoi"
+path = "~"
+startup_command = "chezmoi cd"
+
+[[session]]
+name = "lazydocker"
+startup_command = "lazydocker"
+
+# projects
+[[session]]
+name = "projects"
+path = "~/Projects"
+startup_command = "ls"
+

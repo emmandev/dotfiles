@@ -1,0 +1,10 @@
+[[session]]
+name = "responsibid - backend"
+path = "~/Projects/Symphosize/responsibid-server"
+startup_command = "nvim ."
+
+[[session]]
+name = "responsibid - legacy"
+path = "~/Projects/Symphosize/responsibid-php"
+startup_command = "nvim ."
+
