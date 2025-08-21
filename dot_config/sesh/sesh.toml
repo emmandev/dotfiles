@@ -35,6 +35,12 @@ startup_command = "chezmoi edit ~/.config/sesh/sesh.toml"
 preview_command = "bat ~/.config/sesh/sesh.toml"
 
 [[session]]
+name = "sketchybar config"
+path = "~/.config/sketchybar"
+startup_command = "chezmoi edit ~/.config/sketchybar/sketchybarrc"
+preview_command = "bat ~/.config/sketchybar/sketchybarrc"
+
+[[session]]
 name = "tmux config"
 path = "~/.config/tmux"
 startup_command = "chezmoi edit ~/.config/tmux/tmux.conf"
