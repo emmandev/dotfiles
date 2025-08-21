@@ -1,11 +1,14 @@
 packages:
   darwin:
+    taps:
+    - 'FelixKratz/formulae'
     brews:
     - 'atuin'
     - 'awscli'
     - 'bat'
     - 'eza'
     - 'fd'
+    - 'FelixKratz/formulae/sketchybar'
     - 'fzf'
     - 'git-lfs'
     - 'lazydocker'
