@@ -15,7 +15,7 @@ startup_command = "yazi"
 [[session]]
 name = "aerospace config"
 path = "~/"
-startup_command = "chezmoi edit -/.aerospace.toml"
+startup_command = "chezmoi edit ~/.aerospace.toml"
 preview_command = "bat ~/.aerospace.toml"
 
 [[session]]
