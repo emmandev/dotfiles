@@ -26,6 +26,7 @@ packages:
     - '1password-cli'
     - 'nikitabobko/tap/aerospace'
     - 'docker'
+    - 'font-hack-nerd-font'
     - 'font-monaspace'
     - 'ghostty'
     - 'meetingbar'
