@@ -17,3 +17,9 @@ startup_command = "nvim ."
 name = "responsibid - terraform"
 path = "~/Projects/Symphosize/terraform-infra"
 startup_command = "nvim ."
+
+[[session]]
+name = "responsibid - e2e"
+path = "~/Projects/Symphosize/responsibid-e2e"
+startup_command = "nvim ."
+
