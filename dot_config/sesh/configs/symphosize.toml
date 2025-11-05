@@ -13,3 +13,7 @@ name = "responsibid - subscriptions"
 path = "~/Projects/Symphosize/subscriptions"
 startup_command = "nvim ."
 
+[[session]]
+name = "responsibid - terraform"
+path = "~/Projects/Symphosize/terraform-infra"
+startup_command = "nvim ."
