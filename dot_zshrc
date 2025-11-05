@@ -57,6 +57,7 @@ bindkey -M viins '\es' sesh-sessions
 # Tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export EDITOR="nvim"
+export TMUXIFIER_LAYOUT_PATH="$HOME/.config/tmuxifier"
 
 eval $(/opt/homebrew/bin/brew shellenv)
 eval "$(tmuxifier init -)"
