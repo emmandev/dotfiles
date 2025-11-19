@@ -2,29 +2,31 @@ packages:
   darwin:
     taps:
     brews:
-    - 'atuin'
-    - 'awscli'
-    - 'bat'
-    - 'eza'
-    - 'fd'
-    - 'fzf'
-    - 'git-lfs'
-    - 'lazydocker'
-    - 'lazygit'
-    - 'neovim'
-    - 'nvm'
-    - 'posting'
-    - 'reattach-to-user-namespace'
-    - 'sesh'
-    - 'tmux'
-    - 'yarn'
-    - 'yazi'
-    - 'zoxide'
+      - "atuin"
+      - "awscli"
+      - "bat"
+      - "eza"
+      - "fd"
+      - "fzf"
+      - "git-lfs"
+      - "lazydocker"
+      - "lazygit"
+      - "neovim"
+      - "nvm"
+      - "posting"
+      - "reattach-to-user-namespace"
+      - "sesh"
+      - "tmux"
+      - "yarn"
+      - "yazi"
+      - "zoxide"
     casks:
-    - '1password-cli'
-    - 'nikitabobko/tap/aerospace'
-    - 'docker'
-    - 'font-hack-nerd-font'
-    - 'font-monaspace'
-    - 'ghostty'
-    - 'meetingbar'
+      - "1password-cli"
+      - "nikitabobko/tap/aerospace"
+      - "claude-code"
+      - "docker"
+      - "font-hack-nerd-font"
+      - "font-monaspace"
+      - "ghostty"
+      - "meetingbar"
+      - "session-manager-plugin"
