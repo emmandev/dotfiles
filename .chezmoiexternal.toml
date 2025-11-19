@@ -25,6 +25,7 @@
 [".config/nvim"]
 	type = "git-repo"
 	url = "https://github.com/emmandev/lazyvim.git"
+	refreshPeriod = "168h"
 
 [".config/tmux/plugins/tpm"]
 	type = "git-repo"
