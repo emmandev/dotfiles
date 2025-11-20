@@ -188,6 +188,10 @@ alias cat="bat"
 
 alias lzg="lazygit"
 
+# Responsibid project aliases with 1Password integration
+alias rb-alpha='op run --env-file=$HOME/.config/aws/responsibid/alpha.env --'
+alias rb-prod='op run --env-file=$HOME/.config/aws/responsibid/prod.env --'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
