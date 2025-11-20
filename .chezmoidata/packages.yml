@@ -1,10 +1,12 @@
 packages:
   darwin:
     taps:
+      - "keidarcy/tap"
     brews:
       - "atuin"
       - "awscli"
       - "bat"
+      - "keidarcy/tap/e1s"
       - "eza"
       - "fd"
       - "fzf"
