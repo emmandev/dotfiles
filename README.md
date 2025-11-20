@@ -61,6 +61,43 @@ cd ~/.config/nvim && git pull  # or: chezmoi update
 2. Commit and push to emmandev/lazyvim
 3. Changes sync automatically via chezmoi refresh
 
+## 1Password Integration
+
+**SSH Keys:**
+```bash
+# Add to ~/.ssh/config (managed locally, not in chezmoi)
+Host *
+	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+```
+- Keys stored in 1Password are automatically available
+- Add SSH keys via 1Password app → SSH Keys section
+
+**Environment Variables with 1Password:**
+
+Using [1Password Environments](https://developer.1password.com/docs/environments/):
+
+```bash
+# 1. Create secrets.yaml from example
+cp secrets.yaml.example .chezmoidata/secrets.yaml
+# Fill in your vault/item names
+
+# 2. Templates use variables from secrets.yaml
+# Example .env.tmpl:
+AWS_ACCESS_KEY_ID="op://{{ .project.vault }}/{{ .project.env.aws_item }}/field name"
+
+# 3. Use aliases with op run
+alias my-env='op run --env-file=$HOME/.config/project/env.env --'
+my-env aws s3 ls
+```
+
+**Setup:**
+1. Install 1Password desktop app and enable SSH agent
+2. Add the IdentityAgent line to your local `~/.ssh/config`
+3. Copy `secrets.yaml.example` to `.chezmoidata/secrets.yaml`
+4. Fill in your 1Password vault and item names
+5. Create `.env.tmpl` files with templated secret references
+6. Add aliases to `.zshrc` for convenience
+
 ## Common Commands
 
 | Command | Purpose |
