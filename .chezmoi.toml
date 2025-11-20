@@ -1,0 +1,9 @@
+# Chezmoi configuration file
+# See: https://www.chezmoi.io/reference/configuration-file/
+
+[edit]
+    command = "nvim"
+
+# 1Password integration
+[onepassword]
+    command = "op"
