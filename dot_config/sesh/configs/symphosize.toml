@@ -23,3 +23,8 @@ name = "responsibid - e2e"
 path = "~/Projects/Symphosize/responsibid-e2e"
 startup_command = "nvim ."
 
+[[session]]
+name = "responsibid - crewcal"
+path = "~/Projects/Symphosize/crewcal"
+startup_command = "nvim ."
+
