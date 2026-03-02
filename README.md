@@ -32,7 +32,12 @@ chezmoi apply  # Auto-installs new packages
 
 **Upgrading packages:**
 ```bash
-~/.local/bin/brew-upgrade.sh  # Updates all brew packages to latest versions
+brew-upgrade.sh  # Updates all brew packages to latest versions
+```
+
+**Removing unlisted packages:**
+```bash
+brew-cleanup.sh  # Removes packages not in packages.yml
 ```
 
 **How it works:**
@@ -137,8 +142,10 @@ my-env aws s3 ls
 ├── .chezmoidata/
 │   └── packages.yml                    # Homebrew package definitions
 ├── .chezmoiexternal.toml               # External repo references
-├── scripts/
-│   └── executable_brew-upgrade.sh      # Manual brew upgrade script
+├── dot_local/
+│   └── bin/
+│       ├── executable_brew-upgrade.sh      # Manual brew upgrade script
+│       └── executable_brew-cleanup.tmpl.sh # Removes unlisted packages
 ├── dot_config/
 │   ├── ghostty/                        # Terminal config
 │   ├── sesh/                           # Session manager
