@@ -31,7 +31,7 @@ packages:
     casks:
       - "1password-cli"
       - "nikitabobko/tap/aerospace"
-      - "claude-code"
+      - "claude-code@latest"
       - "docker"
       - "font-hack-nerd-font"
       - "font-monaspace"
