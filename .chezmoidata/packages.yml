@@ -6,13 +6,18 @@ packages:
       - "atuin"
       - "awscli"
       - "bat"
+      - "clang-format" # qmk
+      - "dos2unix" # qmk
       - "keidarcy/tap/e1s"
       - "eza"
       - "fd"
       - "fzf"
       - "git-lfs"
+      - "hidapi" # qmk
       - "lazydocker"
       - "lazygit"
+      - "libusb" # qmk
+      - "make"
       - "neovim"
       - "nvm"
       - "posting"
@@ -22,6 +27,7 @@ packages:
       - "yarn"
       - "yazi"
       - "zoxide"
+      - "zstd" # qmk
     casks:
       - "1password-cli"
       - "nikitabobko/tap/aerospace"
