@@ -110,6 +110,20 @@ alias my-env='op run --env-file=$HOME/.config/project/env.env --'
 my-env aws s3 ls
 ```
 
+**Secrets in config files (chezmoi templates):**
+
+Some tools read a secret from a config *file* rather than an env var. Template the file and
+pull the value with `onepasswordRead`, so it comes from 1Password at `chezmoi apply` time
+and is never committed:
+
+```
+field: "{{ onepasswordRead (printf "op://%s/%s/<field>" .tool.vault .tool.item) }}"
+```
+
+- Store the secret in 1Password; put the vault/item in `secrets.yaml` (git-ignored)
+- The source template holds only the `op://` reference — never the secret
+- `chezmoi apply` renders the file locally; `op` must be signed in at apply time
+
 **Setup:**
 1. Install 1Password desktop app and enable SSH agent
 2. Add the IdentityAgent line to your local `~/.ssh/config`
