@@ -167,6 +167,11 @@ field: "{{ onepasswordRead (printf "op://%s/%s/<field>" .tool.vault .tool.item) 
 **External Resources (pinned — update manually):**
 - powerlevel10k, tmux plugins, tmuxifier (no refresh; via their own tool or `chezmoi apply -R`)
 
+**How updates work:**
+- Externals with a `refreshPeriod` (e.g. `168h`) are re-pulled automatically once that period has elapsed on `chezmoi apply` / `chezmoi update`. Those without one default to `refreshPeriod = 0` — fetched once and pinned until forced with `chezmoi apply -R` (`--refresh-externals`).
+- `run_onchange_` scripts re-run whenever their rendered content changes — e.g. editing `packages.yml` re-triggers `brew bundle`.
+- Reference: [chezmoi externals & `refreshPeriod`](https://www.chezmoi.io/reference/special-files/chezmoiexternal-format/)
+
 ## Repository Structure
 
 ```
