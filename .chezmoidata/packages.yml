@@ -21,6 +21,7 @@ packages:
       - "make"
       - "neovim"
       - "nvm"
+      - "pnpm"
       - "posting"
       - "reattach-to-user-namespace"
       - "sesh"
