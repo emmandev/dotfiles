@@ -1,0 +1,6 @@
+{{- $ref := printf "op://%s/%s" .jiratui.vault .jiratui.item -}}
+jira_api_username: "{{ onepasswordRead (printf "%s/username" $ref) }}"
+jira_api_token: "{{ onepasswordRead (printf "%s/credential" $ref) }}"
+jira_api_base_url: "{{ onepasswordRead (printf "%s/hostname" $ref) }}"
+
+active_sprint_on_startup: true
