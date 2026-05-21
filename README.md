@@ -150,7 +150,6 @@ field: "{{ onepasswordRead (printf "op://%s/%s/<field>" .tool.vault .tool.item) 
 **Development:**
 - Neovim (LazyVim) - external repo
 - tmux + tpm plugins
-- Git configuration
 - Lazygit (git TUI)
 - JiraTUI (Jira client)
 
@@ -164,7 +163,9 @@ field: "{{ onepasswordRead (printf "op://%s/%s/<field>" .tool.vault .tool.item) 
 - oh-my-zsh (weekly)
 - zsh plugins (weekly)
 - Neovim config (weekly)
-- tmux plugins
+
+**External Resources (pinned — update manually):**
+- powerlevel10k, tmux plugins, tmuxifier (no refresh; via their own tool or `chezmoi apply -R`)
 
 ## Repository Structure
 
