@@ -42,7 +42,7 @@ brew-cleanup.sh  # Removes packages not in packages.yml
 
 **How it works:**
 - `packages.yml` defines what should be installed
-- `run_onchange_darwin-install-packages.sh` re-runs `brew bundle` when packages.yml changes — which **installs and upgrades** the listed packages (`brew bundle` upgrades by default)
+- `run_onchange_darwin-install-packages.sh` re-runs `brew bundle --no-upgrade` when packages.yml changes — so it **installs** newly-listed packages but does **not** upgrade existing ones (upgrades stay explicit, via `brew-upgrade.sh`)
 - `brew-upgrade.sh` upgrades everything installed; `brew-cleanup.sh` removes anything not in packages.yml
 
 **Updating chezmoi itself:** Homebrew-installed (and listed in `packages.yml`), so update with `brew upgrade chezmoi`. chezmoi detects this — `chezmoi doctor` reports `upgrade-method: brew-upgrade`.
