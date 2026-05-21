@@ -24,8 +24,14 @@
 
 [".config/nvim"]
 	type = "git-repo"
-	url = "https://github.com/emmandev/lazyvim.git"
+	url = "git@github.com:emmandev/lazyvim.git"
 	refreshPeriod = "168h"
+	# Never rewrite/merge the actively-edited repo; fail safely if local has
+	# unpushed commits (push first, then `chezmoi update`).
+	[".config/nvim".pull]
+		args = ["--ff-only"]
+	[".config/nvim".clone]
+		args = ["--branch", "main", "--single-branch"]
 
 [".config/tmux/plugins/tpm"]
 	type = "git-repo"

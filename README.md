@@ -49,22 +49,37 @@ brew-cleanup.sh  # Removes packages not in packages.yml
 
 **Setup:**
 - Neovim config lives in separate repo: [emmandev/lazyvim](https://github.com/emmandev/lazyvim)
-- Chezmoi syncs it to `~/.config/nvim` with weekly refresh (`refreshPeriod = "168h"`)
-- Plugins managed by lazy.nvim (not chezmoi)
+- Chezmoi syncs it to `~/.config/nvim` as a `git-repo` external with weekly refresh (`refreshPeriod = "168h"`)
+- The remote is SSH (`git@github.com:emmandev/lazyvim.git`), so push/clone use the 1Password SSH agent
+- Plugins managed by lazy.nvim (not chezmoi); plugin versions are pinned in `lazy-lock.json`, which **is** tracked in the repo
 
-**Updating:**
+**`~/.config/nvim` is a live git repo.** Your config and plugin versions are tracked
+there, not in this dotfiles repo — chezmoi only clones/refreshes it. The external pulls
+with `--ff-only`, so it never merges or rewrites your local work: **always push your
+local commits before `chezmoi update`**, or the refresh will stop on divergence (your
+work stays intact).
+
+**Changing config / adding a plugin:**
 ```bash
-# Update LazyVim framework + plugins (inside Neovim)
-:Lazy update
-
-# Update your personal config (if you made changes)
-cd ~/.config/nvim && git pull  # or: chezmoi update
+# Edit files in ~/.config/nvim/lua/plugins/ or lua/config/
+cd ~/.config/nvim
+git add -A && git commit -m "feat: ..." && git push
 ```
 
-**Adding plugins:**
-1. Edit files in `~/.config/nvim/lua/plugins/`
-2. Commit and push to emmandev/lazyvim
-3. Changes sync automatically via chezmoi refresh
+**Updating plugin versions (reproducible across machines):**
+```bash
+# Inside Neovim — rewrites lazy-lock.json
+:Lazy update     # or :Lazy sync
+
+# Commit the new lock file so other machines get the same versions
+cd ~/.config/nvim
+git add lazy-lock.json && git commit -m "build: update lazy-lock" && git push
+```
+
+**Pulling onto another machine:**
+```bash
+chezmoi update   # fast-forwards ~/.config/nvim (push local commits first)
+```
 
 ## 1Password Integration
 
