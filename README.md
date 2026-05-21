@@ -136,13 +136,18 @@ field: "{{ onepasswordRead (printf "op://%s/%s/<field>" .tool.vault .tool.item) 
 
 ## Common Commands
 
-| Command | Purpose |
+| Command | Use it when you want to… |
 |---------|---------|
-| `chezmoi apply` | Apply dotfile changes to system |
-| `chezmoi edit <file>` | Edit source file (e.g., `chezmoi edit ~/.zshrc`) |
-| `chezmoi update` | Pull latest from external repos (oh-my-zsh, nvim, etc.) |
+| `chezmoi apply` | Apply pending changes (package install script runs only if `packages.yml` changed) |
+| `chezmoi apply --exclude=scripts` | Apply files only — skip scripts (e.g. the package installer) |
+| `chezmoi apply --refresh-externals` | Force-refresh pinned externals (tmux plugins, powerlevel10k, tmuxifier) |
 | `chezmoi diff` | Preview what will change before applying |
-| `chezmoi cd` | Navigate to source directory |
+| `chezmoi edit <file>` | Edit a source file (e.g., `chezmoi edit ~/.zshrc`) |
+| `chezmoi update` | Pull latest from external repos (oh-my-zsh, nvim, etc.) |
+| `chezmoi cd` | Navigate to the source directory |
+| `brew-upgrade.sh` | Upgrade all installed brew packages |
+| `brew upgrade <name>` | Upgrade one package (e.g., `brew upgrade chezmoi`) |
+| `brew-cleanup.sh` | Remove packages not in `packages.yml` |
 
 ## Managed Configurations
 
