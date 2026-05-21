@@ -7,6 +7,7 @@ packages:
       - "awscli"
       - "bat"
       - "caddy"
+      - "chezmoi"
       - "clang-format" # qmk
       - "dos2unix" # qmk
       - "keidarcy/tap/e1s"
