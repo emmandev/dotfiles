@@ -81,7 +81,21 @@ startup_command = "nvim ."
 
 # projects
 [[session]]
-name = "projects"
-path = "~/Projects"
-startup_command = "ls"
+name = "ob vault personal"
+path = "~/.vaults/personal"
+startup_command = "nvim ."
+
+[[session]]
+name = "ob vault work"
+path = "~/.vaults/work"
+startup_command = "nvim ."
+
+[[wildcard]]
+pattern = "~/Projects/emmandev/*"
+startup_command = "nvim ."
+
+[[session]]
+name = "keeb config"
+path = "~/Projects/emmandev/keeb"
+startup_command = "nvim ."
 
