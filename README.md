@@ -170,15 +170,19 @@ field: "{{ onepasswordRead (printf "op://%s/%s/<field>" .tool.vault .tool.item) 
 
 ```
 ~/.local/share/chezmoi/
+├── .chezmoi.toml.tmpl                  # chezmoi config (editor, 1Password command)
 ├── .chezmoidata/
 │   └── packages.yml                    # Homebrew package definitions
 ├── .chezmoiexternal.toml               # External repo references
+├── secrets.yaml.example                # Template for .chezmoidata/secrets.yaml (git-ignored)
 ├── dot_local/
 │   └── bin/
 │       ├── executable_brew-upgrade.sh      # Manual brew upgrade script
 │       └── executable_brew-cleanup.tmpl.sh # Removes unlisted packages
 ├── dot_config/
 │   ├── ghostty/                        # Terminal config
+│   ├── jiratui/                        # Jira TUI client
+│   ├── lazygit/                        # Lazygit (git TUI)
 │   ├── sesh/                           # Session manager
 │   ├── tmux/                           # Tmux configuration
 │   └── yazi/                           # File manager
