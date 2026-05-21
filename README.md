@@ -151,6 +151,8 @@ field: "{{ onepasswordRead (printf "op://%s/%s/<field>" .tool.vault .tool.item) 
 - Neovim (LazyVim) - external repo
 - tmux + tpm plugins
 - Git configuration
+- Lazygit (git TUI)
+- JiraTUI (Jira client)
 
 **Tools:**
 - Aerospace (window manager)
