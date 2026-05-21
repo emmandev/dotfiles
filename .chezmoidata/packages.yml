@@ -6,6 +6,7 @@ packages:
       - "atuin"
       - "awscli"
       - "bat"
+      - "caddy"
       - "clang-format" # qmk
       - "dos2unix" # qmk
       - "keidarcy/tap/e1s"
