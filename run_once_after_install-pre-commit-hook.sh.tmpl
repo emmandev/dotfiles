@@ -1,0 +1,10 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+set -euo pipefail
+
+# Activate the gitleaks secret-leak guard (.pre-commit-config.yaml) in the
+# chezmoi source repo. Runs after the package install pass so `pre-commit`
+# (added to packages.yml) is already on PATH.
+cd {{ .chezmoi.sourceDir | quote }}
+pre-commit install
+{{ end -}}

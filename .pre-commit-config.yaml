@@ -1,0 +1,8 @@
+# Secret-leak guard for this dotfiles repo.
+# Activate once per clone:  pre-commit install
+# (chezmoi runs this automatically via run_once_after_install-pre-commit-hook)
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks

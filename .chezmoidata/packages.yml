@@ -25,6 +25,7 @@ packages:
       - "nvm"
       - "pnpm"
       - "posting"
+      - "pre-commit"
       - "reattach-to-user-namespace"
       - "sesh"
       - "tmux"
