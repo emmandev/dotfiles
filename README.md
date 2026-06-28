@@ -112,6 +112,30 @@ alias my-env='op run --env-file=$HOME/.config/project/env.env --'
 my-env aws s3 ls
 ```
 
+**Connecting to ECS (e1s TUI):**
+
+[`e1s`](https://github.com/keidarcy/e1s) is a terminal UI for AWS ECS (think "k9s for ECS"). It reads
+standard `AWS_*` env vars, so wrap it in a Responsibid alias to inject 1Password creds at runtime:
+
+```bash
+rb-alpha e1s   # Alpha (staging)
+rb-prod  e1s   # Production (also used for Beta)
+```
+
+The `rb-alpha` / `rb-prod` aliases (in `.zshrc`) source
+`~/.config/aws/responsibid/{alpha,prod}.env`, which `op run` fills from 1Password — so e1s
+launches already authenticated against the right account/region. No e1s config file is needed.
+
+Inside e1s, navigate **Cluster → Service → Tasks → Containers** (`j`/`k`/arrows, `Enter` to
+descend, `Esc` to go back). To inspect environment variables on a running task:
+
+- Press `t` to view the **task definition** — shows all *plaintext* env vars instantly
+  (secrets appear only as their ARN reference, not the resolved value).
+- Use the **exec/shell** action (binding shown in the footer) to open `/bin/sh` in the container,
+  then `printenv VAR` for the *live runtime value*, including resolved secrets. Requires the task
+  to be deployed with `enableExecuteCommand: true` (a deploy-side flag) and the `session-manager-plugin`
+  (already in `packages.yml`).
+
 **Secrets in config files (chezmoi templates):**
 
 Some tools read a secret from a config *file* rather than an env var. Template the file and
@@ -159,6 +183,7 @@ field: "{{ onepasswordRead (printf "op://%s/%s/<field>" .tool.vault .tool.item) 
 - tmux + tpm plugins
 - Lazygit (git TUI)
 - JiraTUI (Jira client)
+- e1s (AWS ECS TUI) — use via `rb-alpha e1s` / `rb-prod e1s`
 
 **Tools:**
 - Aerospace (window manager)
