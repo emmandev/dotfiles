@@ -15,10 +15,10 @@ cache_dir: /Users/emmantierra/.cache/pvetui
 key_bindings:
     switch_view: ']'
     switch_view_reverse: '['
-    nodes_page: Alt+1
-    guests_page: Alt+2
-    tasks_page: Alt+3
-    storage_page: Alt+4
+    nodes_page: N
+    guests_page: G
+    tasks_page: T
+    storage_page: S
     tasks_toggle_queue: t
     task_stop_cancel: x
     menu: m
