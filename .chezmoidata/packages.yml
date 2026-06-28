@@ -15,6 +15,7 @@ packages:
       - "fd"
       - "fzf"
       - "git-lfs"
+      - "gitleaks"
       - "hidapi" # qmk
       - "jiratui"
       - "lazydocker"

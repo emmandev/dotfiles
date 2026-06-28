@@ -1,8 +1,13 @@
 # Secret-leak guard for this dotfiles repo.
+# Uses the brew-installed gitleaks (see packages.yml) instead of building
+# from source, so commits stay fast and offline-friendly.
 # Activate once per clone:  pre-commit install
 # (chezmoi runs this automatically via run_once_after_install-pre-commit-hook)
 repos:
-  - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.30.1
+  - repo: local
     hooks:
       - id: gitleaks
+        name: gitleaks
+        entry: gitleaks git --pre-commit --redact --staged --verbose
+        language: system
+        pass_filenames: false
