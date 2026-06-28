@@ -192,6 +192,9 @@ alias lzg="lazygit"
 alias rb-alpha='op run --env-file=$HOME/.config/aws/responsibid/alpha.env --'
 alias rb-prod='op run --env-file=$HOME/.config/aws/responsibid/prod.env --'
 
+# pvetui with 1Password credential injection
+alias pvetui='op run --env-file=$HOME/.config/pvetui/pvetui.env -- pvetui'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

@@ -1,0 +1,54 @@
+profiles:
+    home:
+        addr: https://{{ .pvetui.host }}:8006
+        user: root
+        password: ""
+        token_id: ""
+        token_secret: ""
+        realm: pam
+        api_path: /api2/json
+        insecure: true
+        ssh_user: root
+        vm_ssh_user: root
+default_profile: home
+cache_dir: /Users/emmantierra/.cache/pvetui
+key_bindings:
+    switch_view: ']'
+    switch_view_reverse: '['
+    nodes_page: Alt+1
+    guests_page: Alt+2
+    tasks_page: Alt+3
+    storage_page: Alt+4
+    tasks_toggle_queue: t
+    task_stop_cancel: x
+    menu: m
+    global_menu: Ctrl+g
+    shell: s
+    vnc: v
+    refresh: Ctrl+r
+    auto_refresh: a
+    search: /
+    advanced_guest_filter: Ctrl+f
+    help: '?'
+    quit: q
+theme:
+    name: default
+    colors: {}
+plugins:
+    enabled: []
+    ansible:
+        inventory_format: yaml
+        inventory_source: pvetui
+        inventory_style: compact
+        default_limit_mode: selection
+        bootstrap:
+            username: ansible
+            shell: /bin/bash
+            create_home: true
+            exclude_windows_guests: true
+            install_authorized_key: true
+            sudoers_file_mode: "0440"
+            dry_run_default: true
+            parallelism: 10
+            timeout: 2m
+show_icons: true
