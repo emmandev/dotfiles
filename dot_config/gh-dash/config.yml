@@ -94,7 +94,7 @@ theme:
     sectionsShowCount: true
     table:
       showSeparator: true
-      compact: false
+      compact: true
 pager:
   diff: ""
 confirmQuit: true
