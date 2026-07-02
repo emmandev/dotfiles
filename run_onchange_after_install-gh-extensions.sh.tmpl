@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+
+# gh is required to manage extensions; skip silently if it isn't installed yet.
+command -v gh >/dev/null 2>&1 || exit 0
+
+installed="$(gh extension list 2>/dev/null || true)"
+{{ range .packages.darwin.ghExtensions -}}
+if ! grep -q {{ . | quote }} <<< "$installed"; then
+  echo "Installing gh extension: {{ . }}"
+  gh extension install {{ . }}
+fi
+{{ end -}}

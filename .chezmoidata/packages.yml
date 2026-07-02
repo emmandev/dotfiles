@@ -14,6 +14,7 @@ packages:
       - "eza"
       - "fd"
       - "fzf"
+      - "gh"
       - "git-lfs"
       - "gitleaks"
       - "hidapi" # qmk
@@ -45,3 +46,6 @@ packages:
       - "ghostty"
       - "meetingbar"
       - "session-manager-plugin"
+    ghExtensions:
+      - "dlvhdr/gh-dash"
+      - "dlvhdr/gh-enhance"
