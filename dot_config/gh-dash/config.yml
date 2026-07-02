@@ -67,9 +67,14 @@ defaults:
         width: 20
         hidden: true
   refetchIntervalMinutes: 30
-keybindings: {}
+keybindings:
+  universal:
+    - key: g
+      name: lazygit
+      command: >
+        cd {{.RepoPath}} && lazygit
 repoPaths:
-  Symphosize/*: ~/Projects/Symphosize/*
+  ":owner/:repo": "~/Projects/:owner/:repo"
 theme:
   ui:
     sectionsShowCount: true
