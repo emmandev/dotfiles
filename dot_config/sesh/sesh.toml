@@ -81,8 +81,18 @@ startup_command = "nvim ."
 
 # projects
 [[session]]
+name = "homelab"
+path = "~/.config/pvetui/"
+startup_command = "pvetui"
+
+[[session]]
 name = "ob vault personal"
 path = "~/.vaults/personal"
+startup_command = "nvim ."
+
+[[session]]
+name = "ob vault biz"
+path = "~/.vaults/business/"
 startup_command = "nvim ."
 
 [[session]]
