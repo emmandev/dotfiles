@@ -73,6 +73,20 @@ keybindings:
       name: lazygit
       command: >
         cd {{.RepoPath}} && lazygit
+  prs:
+    # Open the selected PR in a new tmux window: check out the branch, then
+    # launch the review TUI. Requires gh-dash to be running inside tmux and
+    # the repo cloned at RepoPath (see repoPaths catch-all below).
+    - key: T
+      name: review (tuicr)
+      command: >
+        tmux new-window -c {{.RepoPath}} -n pr-{{.PrNumber}}
+        "gh pr checkout {{.PrNumber}} && tuicr pr {{.PrNumber}}"
+    - key: O
+      name: review (octo.nvim)
+      command: >
+        tmux new-window -c {{.RepoPath}} -n pr-{{.PrNumber}}
+        "gh pr checkout {{.PrNumber}} && nvim -c 'Octo pr edit {{.PrNumber}}'"
 repoPaths:
   ":owner/:repo": "~/Projects/:owner/:repo"
 theme:

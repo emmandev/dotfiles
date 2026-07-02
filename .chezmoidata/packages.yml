@@ -1,6 +1,7 @@
 packages:
   darwin:
     taps:
+      - "agavra/tap"
       - "keidarcy/tap"
     brews:
       - "atuin"
@@ -31,6 +32,7 @@ packages:
       - "reattach-to-user-namespace"
       - "sesh"
       - "tmux"
+      - "agavra/tap/tuicr" # gh-dash PR review TUI
       - "yarn"
       - "yazi"
       - "zoxide"
