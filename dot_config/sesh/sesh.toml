@@ -62,6 +62,18 @@ name = "chezmoi"
 path = "~"
 startup_command = "chezmoi cd"
 
+# gh-dash is directory-agnostic; pin to ~ so it doesn't inherit the launch cwd.
+[[session]]
+name = "gh-dash"
+path = "~"
+startup_command = "gh dash"
+
+# Global agent monitor. Per-repo actions (add/merge/remove) run from repo sessions.
+[[session]]
+name = "workmux"
+path = "~"
+startup_command = "workmux dashboard"
+
 [[session]]
 name = "jiratui"
 startup_command = "jiratui ui --search-on-startup --focus-item-on-startup 1 --project-key RES --assignee-account-id 70121:6ca58e6c-aeb2-4092-9dd0-5b8ba1295f19"
