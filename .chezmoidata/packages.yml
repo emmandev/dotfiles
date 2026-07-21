@@ -30,6 +30,7 @@ packages:
       - "posting"
       - "pre-commit"
       - "reattach-to-user-namespace"
+      - "resvg" # yazi svg preview backend
       - "sesh"
       - "tmux"
       - "agavra/tap/tuicr" # gh-dash PR review TUI
