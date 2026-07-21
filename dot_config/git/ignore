@@ -1,0 +1,8 @@
+**/.claude/settings.local.json
+
+# workmux symlinks husky's generated .husky/_ into each worktree. The symlink
+# defeats husky's own .husky/_/.gitignore (git won't read a .gitignore inside a
+# symlinked dir), so the generated runtime — including husky's stray `null`
+# file — leaks as untracked noise. Ignore it globally. No trailing slash so it
+# matches both the symlink and a real _ directory with its contents.
+.husky/_
