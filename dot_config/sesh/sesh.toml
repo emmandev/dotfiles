@@ -83,10 +83,6 @@ name = "lazydocker"
 startup_command = "lazydocker"
 
 [[session]]
-name = "spotify"
-startup_command = "ncspot"
-
-[[session]]
 name = "tmuxifier"
 path = "~/.config/tmuxifier"
 startup_command = "nvim ."
