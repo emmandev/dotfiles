@@ -1,0 +1,23 @@
+# workmux global config — TRIAL (chezmoi-managed while I evaluate it).
+# One source of truth for all repos; no per-project .workmux.yaml. See README.md.
+
+nerdfont: true
+agent: claude
+
+# Layout A: agent pane (claude, focused) on top, a shell pane below.
+panes:
+  - command: <agent>
+    focus: true
+  - split: horizontal
+
+# Bootstrap new worktrees without a full reinstall. Your monorepos (yarn/Nx)
+# use a single hoisted root node_modules, so one symlink covers deps. Both
+# entries are no-ops when the file is absent, so this stays safe as a global
+# default across every repo.
+files:
+  copy:
+    - .env
+    - .env.local
+  symlink:
+    - node_modules
+    - .husky/_   # husky's untracked runtime dir (husky.sh); absent → no-op for non-husky repos
