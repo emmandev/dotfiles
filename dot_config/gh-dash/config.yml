@@ -74,19 +74,28 @@ keybindings:
       command: >
         cd {{.RepoPath}} && lazygit
   prs:
-    # Open the selected PR in a new tmux window: check out the branch, then
-    # launch the review TUI. Requires gh-dash to be running inside tmux and
-    # the repo cloned at RepoPath (see repoPaths catch-all below).
+    # Review a PR in an ISOLATED workmux worktree — never switches the main
+    # clone's branch. `add --pr` checks the PR out into its own worktree+window
+    # (-C: no auto-launched agent, -o: reopen if it already exists); `run`
+    # launches tuicr in it; quitting tuicr runs `workmux remove`, which prompts
+    # before deleting and refuses if you left uncommitted changes. Requires
+    # gh-dash running inside tmux and the repo cloned at RepoPath (see below).
     - key: T
-      name: review (tuicr)
+      name: review (tuicr, worktree)
       command: >
-        tmux new-window -c {{.RepoPath}} -n pr-{{.PrNumber}}
-        "gh pr checkout {{.PrNumber}} && tuicr pr {{.PrNumber}}"
+        cd {{.RepoPath}} &&
+        workmux add --pr {{.PrNumber}} --name pr-{{.PrNumber}} -C -o &&
+        workmux run pr-{{.PrNumber}} -b -- zsh -ic "tuicr pr {{.PrNumber}}; workmux remove"
+    # Same isolated-worktree approach as T, for addressing feedback on your own
+    # PRs. No auto-cleanup here: octo is an iterative loop (reply, fix code,
+    # push, come back), so the worktree persists — remove it deliberately with
+    # `workmux remove` (or `workmux merge` when the PR lands).
     - key: O
-      name: review (octo.nvim)
+      name: review (octo.nvim, worktree)
       command: >
-        tmux new-window -c {{.RepoPath}} -n pr-{{.PrNumber}}
-        "gh pr checkout {{.PrNumber}} && nvim -c 'Octo pr edit {{.PrNumber}}'"
+        cd {{.RepoPath}} &&
+        workmux add --pr {{.PrNumber}} --name pr-{{.PrNumber}} -C -o &&
+        workmux run pr-{{.PrNumber}} -b -- zsh -ic "nvim -c 'Octo pr edit {{.PrNumber}}'"
 repoPaths:
   ":owner/:repo": "~/Projects/:owner/:repo"
 theme:
