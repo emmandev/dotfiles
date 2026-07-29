@@ -3,7 +3,6 @@ packages:
     taps:
       - "agavra/tap"
     brews:
-      - "atuin"
       - "awscli"
       - "bat"
       - "caddy"
