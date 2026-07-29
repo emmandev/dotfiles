@@ -219,7 +219,6 @@ field: "{{ onepasswordRead (printf "op://%s/%s/<field>" .tool.vault .tool.item) 
 │       └── executable_brew-cleanup.tmpl.sh # Removes unlisted packages
 ├── dot_config/
 │   ├── ghostty/                        # Terminal config
-│   ├── jiratui/                        # Jira TUI client
 │   ├── lazygit/                        # Lazygit (git TUI)
 │   ├── sesh/                           # Session manager
 │   ├── tmux/                           # Tmux configuration

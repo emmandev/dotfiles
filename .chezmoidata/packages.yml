@@ -17,7 +17,6 @@ packages:
       - "git-lfs"
       - "gitleaks"
       - "hidapi" # qmk
-      - "jiratui"
       - "lazydocker"
       - "lazygit"
       - "libusb" # qmk

@@ -25,11 +25,6 @@ startup_command = "chezmoi edit ~/.config/ghostty/config"
 preview_command = "bat ~/.config/ghostty/config"
 
 [[session]]
-name = "jiratui config"
-path = "~/.config/jiratui/"
-startup_command = "chezmoi edit ~/.config/ghostty/config"
-
-[[session]]
 name = "lazyvim"
 path = "~/.config/nvim"
 
@@ -73,10 +68,6 @@ startup_command = "gh dash"
 name = "workmux"
 path = "~"
 startup_command = "workmux dashboard"
-
-[[session]]
-name = "jiratui"
-startup_command = "jiratui ui --search-on-startup --focus-item-on-startup 1 --project-key RES --assignee-account-id 70121:6ca58e6c-aeb2-4092-9dd0-5b8ba1295f19"
 
 [[session]]
 name = "lazydocker"
