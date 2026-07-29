@@ -40,7 +40,7 @@ packages:
       - "devnullvoid/pvetui/pvetui"
       - "nikitabobko/tap/aerospace"
       - "claude-code@latest"
-      - "docker"
+      - "docker-desktop"
       - "font-hack-nerd-font"
       - "font-monaspace"
       - "ghostty"
