@@ -2,7 +2,6 @@ packages:
   darwin:
     taps:
       - "agavra/tap"
-      - "keidarcy/tap"
     brews:
       - "atuin"
       - "awscli"
@@ -11,7 +10,7 @@ packages:
       - "chezmoi"
       - "clang-format" # qmk
       - "dos2unix" # qmk
-      - "keidarcy/tap/e1s"
+      - "e1s"
       - "eza"
       - "fd"
       - "fzf"
