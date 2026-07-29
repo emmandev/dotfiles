@@ -44,6 +44,7 @@ packages:
       - "font-hack-nerd-font"
       - "font-monaspace"
       - "ghostty"
+      - "jordanbaird-ice"
       - "meetingbar"
       - "session-manager-plugin"
     ghExtensions:
