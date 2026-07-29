@@ -2,3 +2,9 @@
 .config/pvetui/README.md
 .config/workmux/README.md
 
+# oh-my-zsh writes runtime completion caches and compiled .zwc files into its
+# exact external tree; ignore them so `chezmoi apply` stops prompting to overwrite.
+.oh-my-zsh/cache
+.oh-my-zsh/cache/**
+.oh-my-zsh/**/*.zwc
+
