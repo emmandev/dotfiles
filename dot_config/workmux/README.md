@@ -10,7 +10,8 @@ not in the Brewfile yet.
   requirement; worktrunk has no live view.
 - **Global config only** (`~/.config/workmux/config.yaml`) — no per-project
   `.workmux.yaml` anywhere.
-- **Layout A**: `claude` pane (focused) + shell pane below.
+- **Layout**: single pane — `claude --model claude-opus-4-8` (Opus 4.8 pinned;
+  the `opus` alias now tracks Opus 5), focused. No shell split.
 - **Bootstrap**: symlink `node_modules` + `.husky/_`, copy `.env`/`.env.local`
   (no-op where absent → safe globally; monorepos are yarn/Nx with one hoisted
   root). `.husky/_` is husky's untracked runtime dir — without it, hooks in a
