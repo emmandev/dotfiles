@@ -1,0 +1,10 @@
+{
+  "trustedcasks": [
+    "devnullvoid/pvetui/pvetui",
+    "nikitabobko/tap/aerospace"
+  ],
+  "trustedformulae": [
+    "agavra/tap/tuicr",
+    "raine/workmux/workmux"
+  ]
+}
