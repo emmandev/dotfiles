@@ -44,6 +44,7 @@ packages:
       - "font-hack-nerd-font"
       - "font-monaspace"
       - "ghostty"
+      - "handy"
       - "jordanbaird-ice"
       - "meetingbar"
       - "session-manager-plugin"
